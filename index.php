@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['radio-group-1'] = empty($_COOKIE['radio-group-1_value']) ? '' : $_COOKIE['radio-group-1_value'];
   $values['radio-group-2'] = empty($_COOKIE['radio-group-2_value']) ? '' : $_COOKIE['radio-group-2_value'];
   $values['super'] = empty($_COOKIE['super_value']) ? '' : $_COOKIE['super_value'];
-  $values['bio'] = empty($_COOKIE['bio_value']) ? '' : $_COOKIE['bio_value'];
+  $values['bio'] = empty($_COOKIE['bio']) ? '' : $_COOKIE['bio'];
   // TODO: аналогично все поля.
 
   // Включаем содержимое файла form.php.
@@ -129,7 +129,7 @@ else {
     $errors = TRUE;
   }
   else {
-    setcookie('bio_value', $_POST['bio'], time() + 30 * 24 * 60 * 60);
+    setcookie('bio', $_POST['bio'], time() + 30 * 24 * 60 * 60);
   }
 
 // *************
