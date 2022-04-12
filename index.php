@@ -32,8 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $errors['radio-group-2'] = !empty($_COOKIE['radio-group-2_error']);
   $errors['super'] = !empty($_COOKIE['super_error']);
   $errors['bio'] = !empty($_COOKIE['bio_error']);
-  $errors['name'] = !empty($_COOKIE['name_error2']);
-  $errors['email'] = !empty($_COOKIE['email_error2']);
+  
+  $errors2 = array();
+  $errors2['name'] = !empty($_COOKIE['name_error2']);
+  $errors2['email'] = !empty($_COOKIE['email_error2']);
   // TODO: аналогично все поля.
 
   // Выдаем сообщения об ошибках.
@@ -64,11 +66,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     $messages[] = '<div class="error">Заполните биолграфию.</div>';
   }
   
-  if ($errors['name']) {
+  if ($errors2['name']) {
     setcookie('name_error2', '', 100000);
     $messages[] = '<div class="error2">Неверный формат имени.</div>';
   }
-  if ($errors['email']) {
+  if ($errors2['email']) {
     setcookie('email_error2', '', 100000);
     $messages[] = '<div class="error2">Неверный формат email.</div>';
   }
@@ -147,7 +149,7 @@ else {
   
   if (!preg_match("/^[a-zа-яё]+$/i", $_POST['name'])) {
     setcookie('name_error2', '1', time() + 24 * 60 * 60);
-    $errors = TRUE;
+    $errors2 = TRUE;
   }
   else {
     setcookie('name_value', $_POST['name'], time() + 30 * 24 * 60 * 60);
@@ -155,7 +157,7 @@ else {
   
   if (!preg_match("/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/", $_POST['email'])) {
     setcookie('email_error2', '1', time() + 24 * 60 * 60);
-    $errors = TRUE;
+    $errors2 = TRUE;
   }
   else {
     setcookie('email_value', $_POST['email'], time() + 30 * 24 * 60 * 60);
