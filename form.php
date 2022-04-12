@@ -65,7 +65,7 @@ if (!empty($messages)) {
                   Муж
               </label>
               <label>
-                  <input type="radio"
+                  <input type="radio" 
                          name="radio-group-1" 
                          value="female" />
                   Жен
@@ -74,25 +74,25 @@ if (!empty($messages)) {
               Количество конечностей:<br />
               <label>
                   <input type="radio" 
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> 
+                         name="radio-group-2" 
                          value="1" />
                   1
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?>
+                         name="radio-group-2"
                          value="2" />
                   2
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?>
+                         name="radio-group-2" 
                          value="3" />
                   3
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> 
+                         name="radio-group-2"  
                          value="4" />
                   4
               </label><br />
@@ -101,7 +101,7 @@ if (!empty($messages)) {
                   Сверхспособности:
                   <br />
                   <select name="super"
-                      multiple="multiple"> <?php if ($errors['super']) {print 'class="error"';} ?> 
+                      multiple="multiple">
                       <option value="Immortality">Бессмертие</option>
                       <option value="Passing through walls">Прохождение сквозь стены</option>
                       <option value="Levitation">Левитвция</option>
