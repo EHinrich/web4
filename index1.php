@@ -69,7 +69,7 @@ else {
 
   if ($errors) {
     // При наличии ошибок перезагружаем страницу и завершаем работу скрипта.
-    header('Location: index.php');
+    header('Location: index1.php');
     exit();
   }
   else {
