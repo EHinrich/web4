@@ -85,5 +85,5 @@ else {
   setcookie('save', '1');
 
   // Делаем перенаправление.
-  header('Location: index.php');
+  header('Location: index1.php');
 }
