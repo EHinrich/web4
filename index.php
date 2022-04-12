@@ -32,6 +32,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $errors['radio-group-2'] = !empty($_COOKIE['radio-group-2_error']);
   $errors['super'] = !empty($_COOKIE['super_error']);
   $errors['bio'] = !empty($_COOKIE['bio_error']);
+  
+  $errors2=array();
+  $errors2['name'] = !empty($_COOKIE['name_error2']);
+  $errors2['email'] = !empty($_COOKIE['email_error2']);
   // TODO: аналогично все поля.
 
   // Выдаем сообщения об ошибках.
@@ -61,6 +65,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
     setcookie('bio_error', '', 100000);
     $messages[] = '<div class="error">Заполните биолграфию.</div>';
   }
+  
+  if ($errors['name']) {
+    setcookie('name_error2', '', 100000);
+    $messages[] = '<div class="error2">Неверный формат имени.</div>';
+  }
+  if ($errors['email']) {
+    setcookie('email_error2', '', 100000);
+    $messages[] = '<div class="error2">Неверный формат email.</div>';
+  }
   // TODO: тут выдать сообщения об ошибках в других полях.
 
   // Складываем предыдущие значения полей в массив, если есть.
@@ -82,6 +95,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
 else {
   // Проверяем ошибки.
   $errors = FALSE;
+  $errors2 = FALSE;
   if (empty($_POST['name'])) {
     // Выдаем куку на день с флажком об ошибке в поле fio.
     setcookie('name_error', '1', time() + 24 * 60 * 60);
@@ -131,6 +145,23 @@ else {
   else {
     setcookie('bio_value', $_POST['bio'], time() + 30 * 24 * 60 * 60);
   }
+  
+  
+  if (!preg_match("/^[a-zа-яё]+$/i", $_POST['name'])) {
+    setcookie('name_error2', '1', time() + 24 * 60 * 60);
+    $errors = TRUE;
+  }
+  else {
+    setcookie('name_value', $_POST['name'], time() + 30 * 24 * 60 * 60);
+  } 
+  
+  if (!preg_match("/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/", $_POST['email'])) {
+    setcookie('email_error2', '1', time() + 24 * 60 * 60);
+    $errors = TRUE;
+  }
+  else {
+    setcookie('email_value', $_POST['email'], time() + 30 * 24 * 60 * 60);
+  } 
 
 // *************
 // TODO: тут необходимо проверить правильность заполнения всех остальных полей.
@@ -144,12 +175,14 @@ else {
   }
   else {
     // Удаляем Cookies с признаками ошибок.
-    setcookie('fio_error', '', 100000);
+    setcookie('name_error', '', 100000);
     setcookie('email_error', '', 100000);
     setcookie('radio-group-1_error', '', 100000);
     setcookie('radio-group-2_error', '', 100000);
     setcookie('super_error', '', 100000);
     setcookie('bio_error', '', 100000);
+    setcookie('name_error2', '', 100000);
+    setcookie('email_error2', '', 100000);
     // TODO: тут необходимо удалить остальные Cookies.
   }
 
