@@ -68,11 +68,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   
   if ($errors2['name']) {
     setcookie('name_error2', '', 100000);
-    $messages[] = '<div class="error2">Неверный формат имени.</div>';
+    $messages[] = '<div class="error">Неверный формат имени.</div>';
   }
   if ($errors2['email']) {
     setcookie('email_error2', '', 100000);
-    $messages[] = '<div class="error2">Неверный формат email.</div>';
+    $messages[] = '<div class="error">Неверный формат email.</div>';
   }
   // TODO: тут выдать сообщения об ошибках в других полях.
 
