@@ -147,7 +147,7 @@ else {
   }
   
   
-  if (!preg_match("/^[a-zа-яё]+$/i", $_POST['name'])) {
+  if (!preg_match("/^[a-zа-яё]+$/i", $_POST['name']) && !preg_match("", $_POST['name'])) {
     setcookie('name_error2', '1', time() + 24 * 60 * 60);
     $errors2 = TRUE;
   }
@@ -155,7 +155,7 @@ else {
     setcookie('name_value', $_POST['name'], time() + 30 * 24 * 60 * 60);
   } 
   
-  if (!preg_match("/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/", $_POST['email'])) {
+  if (!preg_match("/^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/", $_POST['email']) && !preg_match("", $_POST['email'])) {
     setcookie('email_error2', '1', time() + 24 * 60 * 60);
     $errors2 = TRUE;
   }
