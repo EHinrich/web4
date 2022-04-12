@@ -41,12 +41,14 @@ if (!empty($messages)) {
                 <form action=""  method="POST">
               <label>
                   Имя:<br />
-                  <input name="name" <?php if ($errors['name']) {print 'class="error"';} ?> value="<?php print $values['name']; ?>" />
+                  <input name="name" <?php if ($errors['name']) {print 'class="error"';} ?> <?php if ($errors2['name']) {print 'class="error"';} ?>
+                         value="<?php print $values['name']; ?>" />
               </label><br />
       
                <label>
                   email:<br />
-                  <input name="email" <?php if ($errors['email']) {print 'class="error"';} ?> value="<?php print $values['email']; ?>"
+                  <input name="email" <?php if ($errors['email']) {print 'class="error"';} ?> <?php if ($errors2['email']) {print 'class="error"';} ?>
+                         value="<?php print $values['email']; ?>"
                          type="email" />
               </label><br />
       
