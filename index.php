@@ -32,10 +32,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $errors['radio-group-2'] = !empty($_COOKIE['radio-group-2_error']);
   $errors['super'] = !empty($_COOKIE['super_error']);
   $errors['bio'] = !empty($_COOKIE['bio_error']);
-  
-  $errors2=array();
-  $errors2['name'] = !empty($_COOKIE['name_error2']);
-  $errors2['email'] = !empty($_COOKIE['email_error2']);
+  $errors['name'] = !empty($_COOKIE['name_error2']);
+  $errors['email'] = !empty($_COOKIE['email_error2']);
   // TODO: аналогично все поля.
 
   // Выдаем сообщения об ошибках.
