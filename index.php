@@ -63,16 +63,16 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   }
   if ($errors['bio']) {
     setcookie('bio_error', '', 100000);
-    $messages[] = '<div class="error">Заполните биолграфию.</div>';
+    $messages[] = '<div class="error">Заполните биографию.</div>';
   }
   
   if ($errors2['name']) {
     setcookie('name_error2', '', 100000);
-    $messages[] = '<div class="error">Неверный формат имени.</div>';
+    $messages[] = '<div class="error">Неверный формат имени. Допустимы только буквы.</div>';
   }
   if ($errors2['email']) {
     setcookie('email_error2', '', 100000);
-    $messages[] = '<div class="error">Неверный формат email.</div>';
+    $messages[] = '<div class="error">Неверный формат email. Допустимы латинские буквы, цифры, знак подчеркивания. Пример: login@domen.ru</div>';
   }
   // TODO: тут выдать сообщения об ошибках в других полях.
 
