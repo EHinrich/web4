@@ -41,13 +41,13 @@ if (!empty($messages)) {
                 <form action=""  method="POST">
               <label>
                   Имя:<br />
-                  <input name="name" <?php if ($errors['name']) {print 'class="error"';} ?> value="<?php print $values['name']; ?>" 
+                  <input name="name" <?php if ($errors['name']) {print 'class="error"';} ?> value="<?php print $values['name']; ?>
                          value="" />
               </label><br />
       
                <label>
                   email:<br />
-                  <input name="email" <?php if ($errors['email']) {print 'class="error"';} ?> value="<?php print $values['email']; ?>" 
+                  <input name="email" <?php if ($errors['email']) {print 'class="error"';} ?> value="<?php print $values['email']; ?>
                          value=""
                          type="email" />
               </label><br />
@@ -62,13 +62,13 @@ if (!empty($messages)) {
               Пол:<br />
               <label>
                   <input type="radio"
-                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> value="<?php print $values['radio-group-1']; ?>" 
+                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> value="<?php print $values['radio-group-1']; ?>
                          value="male" />
                   Муж
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> value="<?php print $values['radio-group-1']; ?>" 
+                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> value="<?php print $values['radio-group-1']; ?>
                          value="female" />
                   Жен
               </label><br />
@@ -76,25 +76,25 @@ if (!empty($messages)) {
               Количество конечностей:<br />
               <label>
                   <input type="radio" 
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>" 
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>
                          value="1" />
                   1
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>" 
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>
                          value="2" />
                   2
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>" 
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>
                          value="3" />
                   3
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>" 
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>
                          value="4" />
                   4
               </label><br />
