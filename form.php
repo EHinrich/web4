@@ -110,10 +110,9 @@ if (!empty($messages)) {
       
               <label>
                   Биография:<br />
-                  <textarea name="bio">
+                  <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> >
                   <?php print $values['bio']; ?>
                   </textarea>
-                <?php if ($errors['bio']) {print 'class="error"';} ?> 
               </label><br />
       
       
