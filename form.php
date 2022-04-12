@@ -41,14 +41,12 @@ if (!empty($messages)) {
                 <form action=""  method="POST">
               <label>
                   Имя:<br />
-                  <input name="name" <?php if ($errors['name']) {print 'class="error"';} ?> value="<?php print $values['name']; ?>
-                         value="" />
+                  <input name="name" <?php if ($errors['name']) {print 'class="error"';} ?> value="<?php print $values['name']; ?>" />
               </label><br />
       
                <label>
                   email:<br />
-                  <input name="email" <?php if ($errors['email']) {print 'class="error"';} ?> value="<?php print $values['email']; ?>
-                         value=""
+                  <input name="email" <?php if ($errors['email']) {print 'class="error"';} ?> value="<?php print $values['email']; ?>"
                          type="email" />
               </label><br />
       
@@ -62,13 +60,13 @@ if (!empty($messages)) {
               Пол:<br />
               <label>
                   <input type="radio"
-                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> value="<?php print $values['radio-group-1']; ?>
+                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> value="<?php print $values['radio-group-1']; ?>"
                          value="male" />
                   Муж
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> value="<?php print $values['radio-group-1']; ?>
+                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> value="<?php print $values['radio-group-1']; ?>"
                          value="female" />
                   Жен
               </label><br />
@@ -76,25 +74,25 @@ if (!empty($messages)) {
               Количество конечностей:<br />
               <label>
                   <input type="radio" 
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>"
                          value="1" />
                   1
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>"
                          value="2" />
                   2
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>"
                          value="3" />
                   3
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>"
                          value="4" />
                   4
               </label><br />
@@ -103,7 +101,7 @@ if (!empty($messages)) {
                   Сверхспособности:
                   <br />
                   <select name="super"
-                      multiple="multiple"> <?php if ($errors['super']) {print 'class="error"';} ?> value="<?php print $values['super']; ?>" />
+                      multiple="multiple"> <?php if ($errors['super']) {print 'class="error"';} ?> value="<?php print $values['super']; ?>" />"
                       <option value="Immortality">Бессмертие</option>
                       <option value="Passing through walls">Прохождение сквозь стены</option>
                       <option value="Levitation">Левитвция</option>
@@ -112,7 +110,7 @@ if (!empty($messages)) {
       
               <label>
                   Биография:<br />
-                  <textarea name="bio"></textarea> <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>" />
+                  <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>" </textarea>
               </label><br />
       
       
