@@ -74,25 +74,25 @@ if (!empty($messages)) {
               Количество конечностей:<br />
               <label>
                   <input type="radio" 
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>"
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> 
                          value="1" />
                   1
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>"
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?>
                          value="2" />
                   2
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>"
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?>
                          value="3" />
                   3
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> value="<?php print $values['radio-group-2']; ?>"
+                         name="radio-group-2" <?php if ($errors['radio-group-2']) {print 'class="error"';} ?> 
                          value="4" />
                   4
               </label><br />
@@ -101,7 +101,7 @@ if (!empty($messages)) {
                   Сверхспособности:
                   <br />
                   <select name="super"
-                      multiple="multiple"> <?php if ($errors['super']) {print 'class="error"';} ?> value="<?php print $values['super']; ?>" 
+                      multiple="multiple"> <?php if ($errors['super']) {print 'class="error"';} ?> 
                       <option value="Immortality">Бессмертие</option>
                       <option value="Passing through walls">Прохождение сквозь стены</option>
                       <option value="Levitation">Левитвция</option>
