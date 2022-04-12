@@ -60,13 +60,13 @@ if (!empty($messages)) {
               Пол:<br />
               <label>
                   <input type="radio"
-                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?>
+                         name="radio-group-1"
                          value="male" />
                   Муж
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?>
+                         name="radio-group-1" 
                          value="female" />
                   Жен
               </label><br />
