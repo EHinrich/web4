@@ -80,7 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values = array();
   $values['name'] = empty($_COOKIE['name_value']) ? '' : $_COOKIE['name_value'];
   $values['email'] = empty($_COOKIE['email_value']) ? '' : $_COOKIE['email_value'];
-  $values['radio-group-1'] = 'checked';
+  $values['radio-group-1'] = empty($_COOKIE['radio-group-1_value']) ? '' : $_COOKIE['radio-group-1_value'];
   $values['radio-group-2'] = empty($_COOKIE['radio-group-2_value']) ? '' : $_COOKIE['radio-group-2_value'];
   $values['super'] = empty($_COOKIE['super_value']) ? '' : $_COOKIE['super_value'];
   $values['bio'] = empty($_COOKIE['bio_value']) ? '' : $_COOKIE['bio_value'];
@@ -188,6 +188,37 @@ else {
 
   // Сохранение в БД.
   // ...
+  $user = 'u41181';
+$pass = '2342349';
+$db = new PDO('mysql:host=localhost;dbname=u41181', $user, $pass, array(PDO::ATTR_PERSISTENT => true));
+
+try {
+  $stmt = $db->prepare("INSERT INTO form (name, email, year, sex, number_of_limbs, superpowers, biography, checkbox) 
+  VALUES (:name, :email, :year, :sex, :number_of_limbs, :superpowers, :biography, :checkbox)");
+  
+  $stmt -> bindParam(':name', $name);
+  $stmt -> bindParam(':email', $email);
+  $stmt -> bindParam(':year', $year);
+  $stmt -> bindParam(':sex', $sex);
+  $stmt -> bindParam(':number_of_limbs', $number_of_limbs);
+  $stmt -> bindParam(':superpowers', $superpowers);
+  $stmt -> bindParam(':biography', $biography);
+  $stmt -> bindParam(':checkbox', $checkbox);
+  
+  $name = $_POST['name'];
+  $email = $_POST['email'];
+  $year = $_POST['year'];
+  $sex = $_POST['radio-group-1'];
+  $number_of_limbs = $_POST['radio-group-2'];
+  $superpowers = $_POST['super'];
+  $biography = $_POST['bio'];
+  if (empty($_POST['check']))
+    $checkbox = "No";
+  else
+    $checkbox = $_POST['check'];
+  
+  $stmt->execute();
+}
 
   // Сохраняем куку с признаком успешного сохранения.
   setcookie('save', '1');
