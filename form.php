@@ -110,7 +110,7 @@ if (!empty($messages)) {
       
               <label>
                   Биография:<br />
-                  <textarea name="bio"
+                  <textarea name="bio">
                   <?php print $values['bio']; ?></textarea> 
               </label><br />
       
