@@ -63,13 +63,13 @@ if (!empty($messages)) {
               <label>
                   <input type="radio"
                          name="radio-group-1"
-                         value="male" <?php if($_POST['radio-group-1'] == male){echo 'checked';}?> />
+                         value="male" <?php if($_POST['radio-group-1'] == 'male'){echo 'checked';}?> />
                   Муж
               </label>
               <label>
                   <input type="radio" 
                          name="radio-group-1" 
-                         value="female" <?php if($_POST['radio-group-1'] == female){echo 'checked';}?>  />
+                         value="female" <?php if($_POST['radio-group-1'] == 'female'){echo 'checked';}?>  />
                   Жен
               </label><br />
       
