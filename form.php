@@ -110,7 +110,7 @@ if (!empty($messages)) {
       
               <label>
                   Биография:<br />
-                  <textarea name="bio"</textarea>
+                  <textarea name="bio"></textarea>
               </label><br />
       
       
