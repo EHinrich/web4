@@ -60,13 +60,13 @@ if (!empty($messages)) {
               Пол:<br />
               <label>
                   <input type="radio"
-                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> checked="checked"
+                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?>
                          value="male" />
                   Муж
               </label>
               <label>
                   <input type="radio"
-                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?> checked="checked"
+                         name="radio-group-1" <?php if ($errors['radio-group-1']) {print 'class="error"';} ?>
                          value="female" />
                   Жен
               </label><br />
@@ -110,7 +110,8 @@ if (!empty($messages)) {
       
               <label>
                   Биография:<br />
-                  <textarea name="bio"></textarea>
+                  <textarea name="bio"> <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>" />"
+                </textarea>
               </label><br />
       
       
