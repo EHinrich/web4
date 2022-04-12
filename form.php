@@ -101,7 +101,7 @@ if (!empty($messages)) {
                   Сверхспособности:
                   <br />
                   <select name="super"
-                      multiple="multiple"> <?php if ($errors['super']) {print 'class="error"';} ?> value="<?php print $values['super']; ?>" />"
+                      multiple="multiple"> <?php if ($errors['super']) {print 'class="error"';} ?> value="<?php print $values['super']; ?>" 
                       <option value="Immortality">Бессмертие</option>
                       <option value="Passing through walls">Прохождение сквозь стены</option>
                       <option value="Levitation">Левитвция</option>
@@ -110,7 +110,7 @@ if (!empty($messages)) {
       
               <label>
                   Биография:<br />
-                  <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>" />"
+                  <textarea name="bio" <?php if ($errors['bio']) {print 'class="error"';} ?> value="<?php print $values['bio']; ?>" />
                 </textarea>
               </label><br />
       
