@@ -61,15 +61,18 @@ if (!empty($messages)) {
       
               Пол:<br />
               <label>
-                  <input type="radio"
+                  <?php if ($errors['radio-group-1']) {print 'class="error"';} ?>
+                  <input type="radio" 
                          name="radio-group-1"
-                         value="male" />
+                         value="male"
+                         <?php if($values['radio-group-1']=="male") {print 'checked';} ?> />
                   Муж
               </label>
               <label>
                   <input type="radio" 
                          name="radio-group-1" 
-                         value="female" />
+                         value="female" 
+                         <?php if($values['radio-group-1']=="female") {print 'checked';} ?>/>
                   Жен
               </label><br />
       
@@ -77,25 +80,29 @@ if (!empty($messages)) {
               <label>
                   <input type="radio" 
                          name="radio-group-2" 
-                         value="1" />
+                         value="1" 
+                         <?php if($values['radio-group-2']=="1") {print 'checked';} ?> />
                   1
               </label>
               <label>
                   <input type="radio"
                          name="radio-group-2"
-                         value="2" />
+                         value="2" 
+                         <?php if($values['radio-group-2']=="2") {print 'checked';} ?> />
                   2
               </label>
               <label>
                   <input type="radio"
                          name="radio-group-2" 
-                         value="3" />
+                         value="3"
+                         <?php if($values['radio-group-2']=="3") {print 'checked';} ?>/>
                   3
               </label>
               <label>
                   <input type="radio"
                          name="radio-group-2"  
-                         value="4" />
+                         value="4" 
+                         <?php if($values['radio-group-2']=="4") {print 'checked';} ?> />
                   4
               </label><br />
       
@@ -104,9 +111,9 @@ if (!empty($messages)) {
                   <br />
                   <select name="super"
                       multiple="multiple">
-                      <option value="Immortality">Бессмертие</option>
-                      <option value="Passing through walls">Прохождение сквозь стены</option>
-                      <option value="Levitation">Левитвция</option>
+                      <option value="Immortality" <?php if($values['Immortality']==1){print 'selected';} ?> >Бессмертие</option>
+                      <option value="Passing through walls" <?php if($values['Passing through walls']==1){print 'selected';} ?> >Прохождение сквозь стены</option>
+                      <option value="Levitation" <?php if($values['Levitation']==1){print 'selected';} ?> >Левитвция</option>
                   </select>
               </label><br />
       
