@@ -84,6 +84,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values['radio-group-2'] = empty($_COOKIE['radio-group-2_value']) ? '' : $_COOKIE['radio-group-2_value'];
   $values['super'] = empty($_COOKIE['super_value']) ? '' : $_COOKIE['super_value'];
   $values['bio'] = empty($_COOKIE['bio_value']) ? '' : $_COOKIE['bio_value'];
+  $values['check'] = empty($_COOKIE['check_value']) ? '' : $_COOKIE['check_value'];
   // TODO: аналогично все поля.
 
   // Включаем содержимое файла form.php.
@@ -163,6 +164,8 @@ else {
     setcookie('email_value', $_POST['email'], time() + 30 * 24 * 60 * 60);
   } 
 
+  setcookie('check_value', $_POST['check'], time() + 30 * 24 * 60 * 60);
+  
 // *************
 // TODO: тут необходимо проверить правильность заполнения всех остальных полей.
 // Сохранить в Cookie признаки ошибок и значения полей.
