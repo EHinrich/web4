@@ -111,9 +111,9 @@ if (!empty($messages)) {
                   <br />
                   <select name="super"
                       multiple="multiple">
-                      <option value="Immortality" <?php if($values['Immortality']==1){print 'selected';} ?> >Бессмертие</option>
-                      <option value="Passing through walls" <?php if($values['Passing through walls']==1){print 'selected';} ?> >Прохождение сквозь стены</option>
-                      <option value="Levitation" <?php if($values['Levitation']==1){print 'selected';} ?> >Левитвция</option>
+                      <option value="Immortality" <?php if($values['super']=="Immortality"){print 'selected';} ?> >Бессмертие</option>
+                      <option value="Passing through walls" <?php if($values['super']=="Passing through walls"){print 'selected';} ?> >Прохождение сквозь стены</option>
+                      <option value="Levitation" <?php if($values['super']=="Levitation"){print 'selected';} ?> >Левитвция</option>
                   </select>
               </label><br />
       
@@ -125,9 +125,11 @@ if (!empty($messages)) {
       
       
               Чекбокс:<br />
+                  <?php if ($errors['checkbox']) {print 'class="error"';} ?>
               <label>
                   <input type="checkbox"
-                         name="check" value="Yes"/>
+                         name="check" value="Yes"
+                         <?php if($values['checkbox']==TRUE){print 'checked';} ?> />
                   С контрактом ознакомлен
               </label><br />
       
