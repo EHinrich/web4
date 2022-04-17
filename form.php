@@ -129,7 +129,7 @@ if (!empty($messages)) {
               <label>
                   <input type="checkbox"
                          name="check" value="Yes"
-                         <?php if($values['checkbox']==TRUE){print 'checked';} ?> />
+                         <?php if($values['check']==TRUE){print 'checked';} ?> />
                   С контрактом ознакомлен
               </label><br />
       
