@@ -125,7 +125,6 @@ if (!empty($messages)) {
       
       
               Чекбокс:<br />
-                  <?php if ($errors['checkbox']) {print 'class="error"';} ?>
               <label>
                   <input type="checkbox"
                          name="check" value="Yes"
