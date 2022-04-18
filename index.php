@@ -80,6 +80,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET') {
   $values = array();
   $values['name'] = empty($_COOKIE['name_value']) ? '' : $_COOKIE['name_value'];
   $values['email'] = empty($_COOKIE['email_value']) ? '' : $_COOKIE['email_value'];
+  $values['year'] = empty($_COOKIE['year_value']) ? '' : $_COOKIE['year'];
   $values['radio-group-1'] = empty($_COOKIE['radio-group-1_value']) ? '' : $_COOKIE['radio-group-1_value'];
   $values['radio-group-2'] = empty($_COOKIE['radio-group-2_value']) ? '' : $_COOKIE['radio-group-2_value'];
   $values['super'] = empty($_COOKIE['super_value']) ? '' : $_COOKIE['super_value'];
