@@ -113,7 +113,7 @@ if (!empty($messages)) {
                       multiple="multiple">
                       <option value="Immortality" <?php if($values['super']=="Immortality"){print 'selected';} ?> >Бессмертие</option>
                       <option value="Passing through walls" <?php if($values['super']=="Passing through walls"){print 'selected';} ?> >Прохождение сквозь стены</option>
-                      <option value="Levitation" <?php if($values['super']=="Levitation"){print 'selected';} ?> >Левитвция</option>
+                      <option value="Levitation" <?php if($values['super']=="Levitation"){print 'selected';} ?> >Левитация</option>
                   </select>
               </label><br />
       
