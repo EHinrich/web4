@@ -45,22 +45,21 @@ if (!empty($messages)) {
                          value="<?php print $values['name']; ?>" />
               </label><br />
       
-               <select id="year" name="year">
+               <label>
+                  email:<br />
+                  <input name="email" <?php if ($errors['email']) {print 'class="error"';} ?> <?php if ($errors2['email']) {print 'class="error"';} ?>
+                         value="<?php print $values['email']; ?>"
+                         type="email" />
+              </label><br />
+      
+              <select id="year" name="year">
                 <?php for ($year = 1920; $year <= 2022; $year++) { ?>
                 <option <?php if ($year == $values['year']) {print('selected="selected"');} ?> value="<?php print($year); ?>"><?php print($year); ?></option>
                 <?php } ?>
               </select> <br />
       
-              <select id="year" name="year"></select> <br />
-        <script>for (let year = 1920; year <= 2022; year++) {
-            let options = document.createElement("OPTION");
-            document.getElementById("year").appendChild(options).innerHTML = year;
-          }
-        </script>
-      
               Пол:<br />
               <label>
-                  <?php if ($errors['radio-group-1']) {print 'class="error"';} ?>
                   <input type="radio" 
                          name="radio-group-1"
                          value="male"
